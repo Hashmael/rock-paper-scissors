@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock, Paper, Scissors, Shoot!</title>
+    <script src="./rps-web.ts"></script>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="header">
+        <h1>Test your luck!</h1>
+        <div class="round-input">
+            <lablel for="rounds"># of Rounds: </label>
+            <input id="rounds">
+            <button id="start-game">Start Game!</button>
+        </div>
+    </div>
+    <div id="game-interface" hidden="true">
+        <div id="game-tracker">
+            <p>Max Rounds: </p><p id="max-rounds"></p>
+            <p>Player Wins: </p><p id="player-win-count">0</p> 
+            <p>Computer Wins: </p><p id="computer-win-count">0</p>
+            <p>Ties: </p><p id="draw-count">0</p>
+            <div id="game-victory" hidden="true"></div>
+        </div>
+        <div id="round-interface">
+            <div id="select-rock" class="select-group">
+                <input type="radio" id="select-rock-button" name="round-selection" value="rock">
+                <label for="select-rock-button">Rock</label>
+            </div>
+            <div id="select-paper" class="select-group">
+                <input type="radio" id="select-paper-button" name="round-selection" value="paper">
+                <label for="select-paper-button">Paper</label>
+            </div>
+            <div id="select-scissors" class="select-group">
+                <input type="radio" id="select-scissors-button" name="round-selection" value="scissors">
+                <label for="select-scissors-button">Scissors</label>
+            </div>
+            <button id="trigger-round">Shoot!</button>
+        </div>
+    </div>
+</body>
+</html>

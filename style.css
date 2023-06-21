@@ -1,0 +1,8 @@
+.round-input, #game-tracker, #round-interface {
+    display: flex;
+    gap: 15px;
+}
+
+#rounds, #start-game {
+    flex-grow: 0;
+}
