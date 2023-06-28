@@ -1,4 +1,4 @@
-.round-input, #game-tracker, #round-interface {
+#round-interface *, #game-tracker {
     display: flex;
     gap: 15px;
 }
