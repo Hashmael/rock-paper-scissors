@@ -4,27 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock, Paper, Scissors, Shoot!</title>
-    <script src="./rps-web.ts"></script>
+    <script type="text/javascript" src="./dist/rock-paper-scissors.js" id="rps-script"></script>
     <link rel="stylesheet" href="./style.css">
+    <link rel="shortcut icon" href="#">
 </head>
 <body>
     <div class="header">
         <h1>Test your luck!</h1>
         <div class="round-input">
-            <lablel for="rounds"># of Rounds: </label>
+            <lablel for="rounds">Best of: </label>
             <input id="rounds">
             <button id="start-game">Start Game!</button>
         </div>
     </div>
     <div id="game-interface" hidden="true">
         <div id="game-tracker">
-            <p>Max Rounds: </p><p id="max-rounds"></p>
-            <p>Player Wins: </p><p id="player-win-count">0</p> 
-            <p>Computer Wins: </p><p id="computer-win-count">0</p>
-            <p>Ties: </p><p id="draw-count">0</p>
-            <div id="game-victory" hidden="true"></div>
+            <label for="game-win-count">Games Won: </label><p id="game-win-count">0</p> 
+            <label for="game-loss-count">Games Lost: </label><p id="game-loss-count">0</p>
+            <h1 id="game-victory" hidden="true"></h1>
         </div>
         <div id="round-interface">
+            <label for="current-round">Round #: </label><p id="current-round">0</p>
+            <label for="round-win-count">Rounds Won: </label><p id="round-win-count">0</p>
+            <label for="round-loss-count">Rounds Lost: </label><p id="round-loss-count">0</p>
+            <label for="round-draw-count">Rounds Tied: </label><p id="round-draw-count">0</p>
+            <label for="player-choice">You chose: </label><p id="player-choice"></p>
+            <label for="computer-choice">Computer chose: </label><p id="computer-choice"></p>
+            <h2 id="round-victory" hidden="true"></h2>
             <div id="select-rock" class="select-group">
                 <input type="radio" id="select-rock-button" name="round-selection" value="rock">
                 <label for="select-rock-button">Rock</label>
@@ -37,7 +43,7 @@
                 <input type="radio" id="select-scissors-button" name="round-selection" value="scissors">
                 <label for="select-scissors-button">Scissors</label>
             </div>
-            <button id="trigger-round">Shoot!</button>
+            <button id="trigger-round" disabled="true">Shoot!</button>
         </div>
     </div>
 </body>
